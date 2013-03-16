@@ -173,8 +173,7 @@ a {
 }
 
 a:hover {
-  color: #005580;
-  text-decoration: underline;
+  color: rgb(236, 101, 25);  
 }
 
 .img-rounded {
@@ -1838,11 +1837,15 @@ table {
 .table th,
 .table td {
   padding: 8px;
-  line-height: 20px;
+  /*line-height: 20px;
   text-align: left;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;*/
 }
+
+.table tr td {
+    border: 1px solid #ddd;
+    }
 
 .table th {
   font-weight: bold;
@@ -5257,7 +5260,7 @@ width: 5px;
   display: block;
   padding: 4px;
   line-height: 20px;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;

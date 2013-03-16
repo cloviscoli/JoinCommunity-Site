@@ -7,19 +7,55 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script src="js/jquery.gmap.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/anchor.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.qtip.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#map").gMap({
+                controls: false,
+                scrollwheel: false,
+                draggable: true,
+                markers: [{
+                    latitude: -16.715477,
+                    longitude: -49.261295
+                }
+                ],
+                icon: {
+                    image: "img/pin-blue.png",
+                    iconsize: [32, 32],
+                    iconanchor: [12, 32],
+                    infowindowanchor: [12, 0]
+                },
+                latitude: -16.715477,
+                longitude: -49.261295,
+                zoom: 16,
+            });
+
+            $('a[title]').qtip();
+            $('img[title]').qtip();            
+        });
+    </script>
+
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/m-styles.min.css" rel="stylesheet">
     <link href="css/m-forms.min.css" rel="stylesheet">
     <link href="css/m-buttons.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet">  
-    
-    
-    
+    <link href="css/jquery.fancybox-1.3.4.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/qtip/jquery.qtip.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -32,21 +68,33 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.html">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-  </head>
+    <style type="text/css">
+        #qtip-modal {
+            max-width: 620px;
+            -moz-box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
+            -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
+            box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
+        }
 
-  <body id="home" data-spy="scroll" data-target=".navbar">
+            #qtip-modal .qtip-content {
+                padding: 10px;
+            }
+    </style>
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar">
 
     <!-- HEADER CONTAINER -->
 
 
-      <!-- CONTENT -->
-   
+    <!-- CONTENT -->
 
-<div class="row header">
-   
-  <!-- NAV --> 
-  
-<nav class="navbar navbar-fixed-top">
+
+    <div class="row header">
+
+        <!-- NAV -->
+
+        <nav class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
 
@@ -58,499 +106,398 @@
                     <h1 class="brand">
                         <a href="index.html">
                             <img src="img/bootmetrologo.png" alt="">
-                        </a>                            
+                        </a>
                     </h1>
-            
+
                     <div class="nav-collapse">
                         <ul class="nav pull-right">
-                          <li><a href="#home" class="anchorLink">Home</a></li>
-                          <li><a href="#about" class="anchorLink">O Evento</a></li>
-                          <li><a href="#portfolio" class="anchorLink">Facilitadores</a></li>
-					      <li><a href="#agenda" class="anchorLink">Agenda</a></li>
-                          <li><a href="#contact" class="anchorLink">Local</a></li>
-                          <li><a href="http://eventick.com.br/joincommunity" target="_new">Inscrições</a></li>
+                            <li><a href="#home" class="anchorLink">Home</a></li>
+                            <li><a href="#about" class="anchorLink">O Evento</a></li>
+                            <li><a href="#portfolio" class="anchorLink">Facilitadores</a></li>
+                            <li><a href="#agenda" class="anchorLink">Agenda</a></li>
+                            <li><a href="#contact" class="anchorLink">Local</a></li>
+                            <li><a href="http://eventick.com.br/joincommunity" target="_new">Inscrições</a></li>
                         </ul>
                     </div>
 
                 </div>
             </div>
         </nav>
-  </div>
+    </div>
 
 
-<!-- Start Callout -->
+    <!-- Start Callout -->
     <div class="full callout">
-      <div class="container">
-        <div class="row">
-          <a href="http://eventick.com.br/joincommunity" class="btn btn-large btn-danger btn-register">Faça já sua inscrição!</a>
-        </div>
-		<div class="span4">
-			</br>
+        <div class="container">
+            <div class="row">
+                <a href="http://eventick.com.br/joincommunity" class="btn btn-large btn-danger btn-register">Faça já sua inscrição!</a>
+            </div>
+            <div class="span4">
+                </br>
 			</br>
 			</br>
 			</br>
 			<h3>Data: 23/03/2013 às 08:00h</h3>
-		</div>
-      </div>
+            </div>
+        </div>
     </div>
-<!-- End Callout -->
+    <!-- End Callout -->
 
 
 
-<!-- Start About -->
-        <div class="row-fluid section" id="about">
-          <div class="container"> 
+    <!-- Start About -->
+    <div class="row-fluid section" id="about">
+        <div class="container">
 
             <div class="explain">
-              <h2>O Evento</h2>
-              <p class="intro">Os grupos <a href="http://www.gojava.org">GoJava</a>, <a href="http://www.devgoias.net">DevGoiás</a>, <a href="http://www.gophp.org.br">GoPHP</a> e <a href="http://go.gtugs.org">GDG</a> irão se reunir no próximo dia 23 de março para abusar do conhecimento e trocar boas experiências! Juntos criaram o evento <em>Join Community</em>, que nesta primeira edição traz bons assuntos relacionados às boas práticas no desenvolvimento de software orientados a objetos, o <strong>Design Patterns</strong>.</p>
-              <div class="row-fluid"> 
-              <div class="span4">
-                <h3>Objetivo</h3>
-                <p>Como vamos envolver várias comunidades, evento terá foco em networking e compartilhar conhecimentos entre as comunidades e interoperabilidade entre as diversas tecnologias.</p>
-				<h3>Público Alvo</h3>
-				<p>Desenvolvedores, Gerentes de TI, Empresários e Estudantes.</p>
-				<p>Nesta primeira edição abordaremos o tema OO (Orientação a objetos), onde serão discutidas melhores práticas e seu uso em cada tecnologia especifica. </p>
-              </div>
+                <h2>O Evento</h2>
+                <p class="intro">
+                    Os grupos <a href="http://www.gojava.org" title="Comunidade Java em Goiás">GoJava</a>, <a
+                        href="http://www.devgoias.net" title="Comunidade .NET em Goiás">DevGoiás</a>, <a
+                            href="http://www.gophp.org.br" title="Comunidade PHP em Goiás">GoPHP</a> e <a
+                                href="http://go.gtugs.org" title="Comunidade Google em Goiás">GDG</a> irão se reunir no próximo dia 23 de março para abusar do conhecimento e trocar boas experiências! Juntos criaram o evento <em>Join Community</em>, que nesta primeira edição traz bons assuntos relacionados às boas práticas no desenvolvimento de software orientados a objetos, o <strong>Design Patterns</strong>.
+                </p>
+                <div class="row-fluid">
+                    <div class="span4">
+                        <h3>Objetivo</h3>
+                        <p>Como vamos envolver várias comunidades, evento terá foco em networking e compartilhar conhecimentos entre as comunidades e interoperabilidade entre as diversas tecnologias.</p>
+                        <h3>Público Alvo</h3>
+                        <p>Desenvolvedores, Gerentes de TI, Empresários e Estudantes.</p>
+                        <p>Nesta primeira edição abordaremos o tema OO (Orientação a objetos), onde serão discutidas melhores práticas e seu uso em cada tecnologia especifica. </p>
+                    </div>
 
-          <div class="span4">
-            <h3>Benefícios</h3>
-            <p>
-            	<strong>Para profissionais:</strong> o conteúdo técnico que será apresentado é de grande importância para inovar o conhecimento e principalmente o networking com outros profissionais da área.
-          	</p>
-			<p>
-				<strong>Para empresas:</strong> oportunidade da visão de outras tecnologias sob seus produtos, reciclagem dos colaboradores e também fonte de acesso direto aos profissionais do segmento.
-			</p>
-          </div>
-		    
-			<div class="span4">
-                <h3>Inscrições</h3>
-				<p>Todos que já organizaram evento, sabem a dificuldade e os riscos envolvidos com a presença dos participantes.</p>
-				<p>Optamos por manter uma taxa de comprometimento, que será revertida para a manutenção do evento (local, coffee-break, material)</p>
-				<p>Esta é uma taxa muito pequena para qualquer evento em Goiânia, e está sendo usada para dimensionarmos o evento.</p>
-				<p>Valor de inscrição: R$ 20,00</p>
-              </div>
+                    <div class="span4">
+                        <h3>Benefícios</h3>
+                        <p>
+                            <strong>Para profissionais:</strong> o conteúdo técnico que será apresentado é de grande importância para inovar o conhecimento e principalmente o networking com outros profissionais da área.
+                        </p>
+                        <p>
+                            <strong>Para empresas:</strong> oportunidade da visão de outras tecnologias sob seus produtos, reciclagem dos colaboradores e também fonte de acesso direto aos profissionais do segmento.
+                        </p>
+                    </div>
 
-          </div> 
-                
-          </div>
+                    <div class="span4">
+                        <h3>Inscrições</h3>
+                        <p>Todos que já organizaram evento, sabem a dificuldade e os riscos envolvidos com a presença dos participantes.</p>
+                        <p>Optamos por manter uma taxa de comprometimento, que será revertida para a manutenção do evento (local, coffee-break, material)</p>
+                        <p>Esta é uma taxa muito pequena para qualquer evento em Goiânia, e está sendo usada para dimensionarmos o evento.</p>
+                        <p>Valor de inscrição: R$ 20,00</p>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-      </div>
-            
-                
+    </div>
 
-      <!-- PORTFOLIO -->
-      <div class="row section" id="portfolio">
-    <div class="container">
 
-                  <h2>Facilitadores</h2>
-                  <p class="intro">Na grade de facilitadores contaremos com profissionais da área de desenvolvimento e membros da comunidade.</p>
-      <!-- Start Portfolio Navigation -->
-      <nav class="primary m-btn-group toggle-buttons clearfix"> 
-          <ul> 
-              <li><a href="#" class="m-btn selected" data-filter="*">Todos</a></li> 
-              <li><a href="#" class="m-btn" data-filter=".co">Conceitos de OO</a></li>               
-              <li><a href="#" class="m-btn" data-filter=".bp">Boas Práticas</a></li> 
-              <li><a href="#" class="m-btn" data-filter=".dp">Design Patterns</a></li> 
-          </ul> 
-      </nav> 
+
+    <!-- PORTFOLIO -->
+    <div class="row section" id="portfolio">
+        <div class="container">
+
+            <h2>Facilitadores</h2>
+            <p class="intro">Na grade de facilitadores contaremos com profissionais da área de desenvolvimento e membros da comunidade.</p>
+            <!-- Start Portfolio Navigation -->
+            <nav class="primary m-btn-group toggle-buttons clearfix">
+                <ul>
+                    <li><a href="#" class="m-btn selected" data-filter="*">Todos</a></li>
+                    <li><a href="#" class="m-btn" data-filter=".co">Conceitos de OO</a></li>
+                    <li><a href="#" class="m-btn" data-filter=".bp">Boas Práticas</a></li>
+                    <li><a href="#" class="m-btn" data-filter=".dp">Design Patterns</a></li>
+                </ul>
+            </nav>
 
 
             <!-- START Portfolio items -->
 
-            <section class="main clearfix"> 
-              
-            <div class="portfolio"> 
-                  
-                <figure class="entry co"> 
-                    <img src="img/marcelo-paiva.png" alt="">
-                    <h5 style="text-align:center">Marcelo Paiva</h4>
-                </figure> 
-                
-                <figure class="entry bp"> 
-                    <img src="img/clovis-coli.png" alt=""> 
-                    <h5 style="text-align:center">Clovis Coli</h4>
-                </figure> 
-                
-                <figure class="entry bp"> 
-                    <img src="img/rogerio-araujo.png" alt="">
-                    <h5 style="text-align:center">Rogério Araújo</h4>
-                </figure> 
-  
-                <figure class="entry co"> 
-                    <img src="img/otavio-calaca.png" alt="">
-                    <h5 style="text-align:center">Otávio Calaça</h4>
-                </figure> 
-  
-                <figure class="entry co"> 
-                    <img src="img/frederico-maia.png" alt=""> 
-                    <h5 style="text-align:center">Frederico Maia</h4>
-                </figure> 
-  
-                <figure class="entry bp"> 
-                    <img src="img/marcelo-quinta.png" alt=""> 
-                    <h5 style="text-align:center">Marcelo Quinta</h4>                    
-                </figure> 
-  
-                <figure class="entry bp dp"> 
-                    <img src="img/rodrigo-kono.png" alt=""> 
-                    <h5 style="text-align:center">Rodrigo Kono</h4>                    
-                </figure> 
-  
-            </div> 
-  
-        </section> 
+            <section class="main clearfix">
+
+                <div class="portfolio">
+
+                    <figure class="entry co">
+                        <img src="img/marcelo-paiva.png" title="Envangelista .Net, MCP e IBM CLP. Tecnólogo em processamento de dados, desenvolve soluções de controle de acesso e biometria pela Softprime Soluções. Possui mais de 15 anos de experiência com desenvolvimento e trabalha com .Net desde a versão 1.0.   Atualmente desenvolve projetos com o Framework 4/4.5 utilizando tecnologias WCF, Entity Framework, XAML, entre outras.">
+                        <h5 style="text-align: center">
+                        Marcelo Paiva</h4>
+                    </figure>
+
+                    <figure class="entry bp">
+                        <img src="img/clovis-coli.png" title="Working more than 10 years with development and software architecture for desktop and web, 
+                        I have experience as project manager, teacher and lecturer in IT, I have Microsoft certification in Web Development and 
+                        am currently a founding partner of Enfinit Technology.">
+                        <h5 style="text-align: center">
+                        Clovis Coli</h4>
+                    </figure>
+
+                    <figure class="entry bp">
+                        <img src="img/rogerio-araujo.png" alt="" title="?">
+                        <h5 style="text-align: center">
+                        Rogério Araújo</h4>
+                    </figure>
+
+                    <figure class="entry co">
+                        <img src="img/otavio-calaca.png" title="Tem experiência com desenvolvimento Web desde 2004. Professor e Consultor principalmente nos seguintes temas: desenvolvimento web, programação, orientação a objetos, AJAX, PHP e MVC. Palestrou em mais de 15 eventos nacionais e internacionais e é entusiasta do Software Livre e da Web 2.0. Possui graduação em Redes de Comunicação pelo Instituto Federal de Educação, Ciência e Tecnologia de Goiás - IFG. Coordenador de Desenvolvimento de Sistemas na Câmara de Dirigentes Lojistas de Goiânia. Mestrando em Ciência da Computação, nas áreas de Web Semântica e Inteligência Artificial, pela Universidade Federal de Goiás – UFG.">
+                        <h5 style="text-align: center">
+                        Otávio Calaça</h4>
+                    </figure>
+
+                    <figure class="entry co">
+                        <img src="img/frederico-maia.png" title="CIO, Founder and Software Developer at What's Job?!. Software Developer at Requisito Tecnologia. Independent Instructor Java. JUGLeader at Gojava (Grupo de Usuários Java de Goiás).">
+                        <h5 style="text-align: center">
+                        Frederico Maia</h4>
+                    </figure>
+
+                    <figure class="entry bp">
+                        <img src="img/marcelo-quinta.png" title="@GoJava Jug-leader, GDG Goiás organizer, interested in Mobility (with Java, Android and iOS), UI, UX, Arduino and dinossaurs, not necessarily in that order.">
+                        <h5 style="text-align: center">
+                        Marcelo Quinta</h4>                    
+                    </figure>
+
+                    <figure class="entry bp dp">
+                        <img src="img/rodrigo-kono.png" alt="" title="É Microsoft MVP, MCP, MCTS, MCPD e MCT. Possui mais de 12 anos de carreira em desenvolvimento de aplicações e se graduou em Ciências da Computação. É developer na LG Sistemas. Fundou o grupo de usuários DevGoiás.NET, é um dos disseminadores da plataforma.NET no Brasil, é membro do board da INETA (International .NET Associations), ministrou palestras nas principais capitais do país e grandes eventos como o TechEd, totalizando mais de 15.000 pessoas nos últimos nove anos.<br /><br />Corredor de rua, amante da comida japonesa e viciado em uma boa partida de futebol no XBOX.">
+                        <h5 style="text-align: center">
+                        Rodrigo Kono</h4>                                        
+                    </figure>
+
+                </div>
+
+            </section>
 
 
 
-    </div>
-  </div>
-
-<!-- AGENDA -->
-      <div class="row section" id="agenda">
-    <div class="container">
-
-                  <h2>Agenda</h2>
-                  <p class="intro">*Sujeita a alterações. Teremos área para livre discussão e muito networking.</p>
- 
-
-            <section class="main clearfix"> 
-              
-            <table class="table">
-             <thead>
-             	<tr>
-	             	<th>
-		             	Horário
-	             	</th>
-	             	<th>
-		             	Hand-on
-	             	</th>
-	             	<th>
-		             	Hand-on
-	             	</th>
-	             	<th>
-		             	Dojo / Area Livre
-	             	</th>
-             	</tr>
-             </thead>
-             <tbody>
-             	<tr>
-	             	<td>
-		             	08:00 às 09:00
-	             	</td>
-	             	<td>
-		             	Credenciamento
-	             	</td>
-	             	<td>
-		             	
-	             	</td>
-	             	<td>
-		             
-	             	</td>
-             	</tr>
-             	<tr>
-	             	<td>
-		             	09:00 às 10:00
-	             	</td>
-	             	<td>
-		             	Conceitos de OO - Você realmente aprendeu OO? - Frederico Maia
-	             	</td>
-	             	<td title="Esta track irá abordar o que você precisa fazer para reduzir significativamente as falhas de desenvolvimento de software e como reparar as suas causas para que eles não reapareçam. O lema é aprender com os erros! AntiPatterns destacam os problemas mais comuns que a indústria de software enfrenta e ao mesmo tempo fornece as soluções para que você possa reconhecer esses problemas, mostrando que o Software Configuration Management (SCM) não é nem muito duro e nem muito complicado.">
-						Padroes de Projeto  “design patterns” e “anti-patterns” - Rodrigo Kono
-	             	</td>
-	             	<td>
-		               	
-	             	</td>
-             	</tr>
-				<tr>
-	             	<td>
-		             	10:00 às 10:30
-	             	</td>
-	             	<td>
-		             	Networking / Coffee-Break
-	             	</td>
-	             	<td>
-	             	</td>
-	             	<td>
-	             	</td>
-             	</tr>
-				<tr>
-	             	<td>
-		             	10:30 às 11:30
-	             	</td>
-	             	<td>
-		             	Boas Práticas Padrões de Projeto para Modularização. - Filipe Portes
-	             	</td>
-	             	<td>
-						Conceitos de OO: ORM - Marcelo Paiva
-	             	</td>
-	             	<td>
-		               	
-	             	</td>
-             	</tr>
-             	<tr>
-	             	<td>
-		             	11:30 às 12:30
-	             	</td>
-	             	<td>
-		             	Padrões de Projeto - GDG
-	             	</td>
-	             	<td>
-		             	Boas Práticas - Caso de sucesso com IOS - Rogério Araújo
-	             	</td>
-	             	<td>
-		               
-	             	</td>
-             	</tr>
-		<tr>
-	             	<td>
-		             	12:30 às 14:00
-	             	</td>
-	             	<td>
-		             	Almoço *Por conta do participante.
-	             	</td>
-	             	<td>
-						
-	             	</td>
-	             	<td>
-	             	</td>
-             	</tr>
-				<tr>
-	             	<td>
-		             	14:00 às 15:00
-	             	</td>
-	             	<td>
-		             	Padrões de Projeto - Interoperabilitade entre plataformas - Clóvis
-	             	</td>
-	             	<td>
-		             	Boas Práticas - Técnicas para um código limpo (Clean Code)
-	             	</td>
-	             	<td>
-	             	</td>
-             	</tr>
-				<tr>
-	             	<td>
-		             	15:00 às 15:30
-	             	</td>
-	             	<td>
-				Networking / Coffee-Break
-	             	</td>
-	             	<td>
-	             	</td>
-	             	<td>
-	             	</td>
-             	</tr>
-             	<tr>
-	             	<td>
-		             	15:30 às 16:30
-	             	</td>
-	             	<td>
-		             	Boas Práticas no Desenvolvimento Android - Fernando Camargo
-	             	</td>
-	             	<td>
-		             	Boas Práticas: Introdução do Kinect (a confirmar)
-	             	</td>
-	             	<td>
-		               
-	             	</td>
-             	</tr>
-             	<tr>
-	             	<td>
-		             	16:30 às 17:00
-	             	</td>
-	             	<td>
-		             	Encerramento (sorteio, avisos etc.)
-	             	</td>
-	             	<td>
-	             	</td>
-	             	<td>
-	             	</td>
-             	</tr>
-             	
-             </tbody>
-             
-			</table>
-  
-        </section> 
-
-
-
-    </div>
-  </div>
-
-
-
-     <div class="row section" id="contact">
-    <!-- MAP ############################################### -->
-    
-    <div>  
-    <div class="container">
-      <h2>Local do Evento</h2>
-      <p class="intro">PontoGet Coworking - <a href="http://www.pgcoworking.com.br" target="_blank">http://www.pgcoworking.com.br</a></p>
-    </div>
-    
-      <div class="container hidden-phone" id="map"> </div> <!-- /container -->
-    
+        </div>
     </div>
 
-    <!-- /MAP ############################################### -->
-    <div id="form">
-    
-      <div class="container">
-    
-        <div class="row">        
-            <div class="span3" >
-            
-            <h3>Endereço</h3>
+    <!-- AGENDA -->
+    <div class="row section" id="agenda">
+        <div class="container">
 
-				
-              <p>Edifício PontoGet Coworking<br>
-                Primeiro Andar<br>
-                Rua T-64 com Rua S-004
+            <h2>Agenda</h2>
+            <p class="intro">No Join Community a linguagem que você programa é apenas um detalhe. Venha discutir tecnologia com 
+                especialistas de diversas áreas e amplie seu conhecimento e network!</p>
+            <section class="main clearfix">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="width:10%;">Horário</th>
+                            <th style="width:35%;">Hands-on</th>
+                            <th style="width:35%;">Palestra</th>
+                            <th style="width:20%;">Dojo & Comunidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #f1f1f1">
+                            <td>08:00 às 09:00</td>
+                            <td colspan="3">Credenciamento</td>
+                        </tr>
+                        <tr>
+                            <td>09:00 às 10:00</td>
+                            <td><strong>Conceitos de OO - Você realmente aprendeu OO?</strong><br />Frederico Maia</td>
+                            <td><strong><a title="Esta track irá abordar o que você precisa fazer para reduzir significativamente as falhas de desenvolvimento de software e como reparar as suas causas para que eles não reapareçam. O lema é aprender com os erros! AntiPatterns destacam os problemas mais comuns que a indústria de software enfrenta e ao mesmo tempo fornece as soluções para que você possa reconhecer esses problemas, mostrando que o Software Configuration Management (SCM) não é nem muito duro e nem muito complicado.">Padrões de Projeto - “Design Patterns” e “AntiPatterns"</a></strong><br />Rodrigo Kono</td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #f1f1f1;">
+                            <td>10:00 às 10:30</td>
+                            <td colspan="3">Networking / Coffee-Break</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 às 11:30
+                            </td>
+                            <td>Boas Práticas Padrões de Projeto para Modularização. - Filipe Portes
+                            </td>
+                            <td>Conceitos de OO: ORM - Marcelo Paiva
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:30 às 12:30
+                            </td>
+                            <td>Padrões de Projeto - GDG
+                            </td>
+                            <td>Boas Práticas - Caso de sucesso com IOS - Rogério Araújo
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #f1f1f1">
+                            <td>12:30 às 14:00</td>
+                            <td colspan="3">Almoço <em>(Por conta do participante)</em></td>                            
+                        </tr>
+                        <tr>
+                            <td>14:00 às 15:00</td>
+                            <td>Padrões de Projeto - Interoperabilitade entre plataformas - Clóvis</td>
+                            <td><strong><a title="Código que simplesmente “funciona” não é suficiente, infelizmente. Código que tem valor real e é duradouro, tem de ser “limpo”! Esta track irá abordar um pouco sobre as técnicas de Clean Code, o que é um código limpo, quais suas características e como transformar seu código ruim em um código claro e legível. Atitudes que afetam nosso comportamento como desenvolvedor e que, sem dúvidas, transformam a maneira de como desenvolvemos software.">Boas Práticas Técnica para um código limpo (Clean Code)</a></strong><br />Rodrigo Kono</td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color:#f1f1f1;">
+                            <td>15:00 às 15:30</td>
+                            <td colspan="3">Networking / Coffee-Break</td>
+                        </tr>
+                        <tr>
+                            <td>15:30 às 16:30
+                            </td>
+                            <td>Boas Práticas no Desenvolvimento Android - Fernando Camargo
+                            </td>
+                            <td>Boas Práticas: Introdução do Kinect (a confirmar)
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr style="background-color: #f1f1f1">
+                            <td>16:30 às 17:00
+                            </td>
+                            <td colspan="3">Encerramento (sorteio, avisos etc.)
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+
+
+    <div class="row section" id="contact">
+        <!-- MAP ############################################### -->
+
+        <div>
+            <div class="container">
+                <h2>Local do Evento</h2>
+                <p class="intro">Rua T-64 com Rua S-004 Setor Bela Vista, Goiânia - GO</p>
+            </div>
+
+            <div class="container hidden-phone" id="map"></div>
+            <!-- /container -->
+
+        </div>
+
+        <!-- /MAP ############################################### -->
+        <div id="form">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="span3">
+
+                        <h3>Endereço</h3>
+
+
+                        <p>
+                            Edifício PontoGet Coworking<br>
+                            Primeiro Andar<br>
+                            Rua T-64 com Rua S-004
                 Setor Bela Vista<br>
-                CEP: 74823-350<br>
-                Goiânia - Goiás - Brasil<br>
-                Web: <a href="http://www.pontoget.com.br" target="_blank">www.pontoget.com.br</a>
-				</p>          </div>
-          
-          <div class="span8 offset1" >
-           <h4>Patrocinadores:</h4>
-	   <div class="row-fluid">
-            <ul class="thumbnails">
-              </li>   
+                            CEP: 74823-350<br>
+                            Goiânia - Goiás - Brasil<br>
+                            Web: <a href="http://www.pontoget.com.br" target="_blank">www.pontoget.com.br</a>
+                        </p>
+                    </div>
+
+                    <div class="span8 offset1">
+                        <h4>Patrocinadores:</h4>
+                        <div class="row-fluid">
+                            <ul class="thumbnails">
+                                </li>   
 		<li class="span3">
-                <a href="http://www.metatecnologia.com.br" target="_blank" class="thumbnail">
-                  <img alt="Meta Tecnologia" src="img/Logo_METATecnologia.png"/>
-                </a>
-              </li>           
-            </ul>
-          </div>
-           <h4>Organização:</h4>
-           <div class="row-fluid">
-            <ul class="thumbnails">
-              <li class="span3">
-                <a href="javascript:return false;" class="thumbnail">
-                  <img alt="GoJava" src="img/gojava.jpg"/>
-                </a>
-              </li>
-              <li class="span3">
-                <a href="javascript:return false;" class="thumbnail">
-                  <img alt="DevGoiás" src="img/devgoias.png"/>
-                </a>
-              </li>
-              <li class="span3">
-                <a href="javascript:return false;" class="thumbnail">
-                  <img alt="GoPHP" src="img/gophp.png"/>
-                </a>
-              </li>
-              <li class="span3">
-                <a href="javascript:return false;" class="thumbnail">
-                  <img alt="GDG Goiás" src="img/gdggoias.jpg"/>
-                </a>
-              </li>
-            </ul>
-          </div>
-           <h4>Apoio:</h4>
-			<div class="row-fluid">
-            <ul class="thumbnails">
-              </li>   
+            <a href="http://www.metatecnologia.com.br" target="_blank" class="thumbnail">
+                <img alt="Meta Tecnologia" src="img/Logo_METATecnologia.png" />
+            </a>
+        </li>
+                            </ul>
+                        </div>
+                        <h4>Organização:</h4>
+                        <div class="row-fluid">
+                            <ul class="thumbnails">
+                                <li class="span3">
+                                    <a href="javascript:return false;" class="thumbnail">
+                                        <img alt="GoJava" src="img/gojava.jpg" />
+                                    </a>
+                                </li>
+                                <li class="span3">
+                                    <a href="javascript:return false;" class="thumbnail">
+                                        <img alt="DevGoiás" src="img/devgoias.png" />
+                                    </a>
+                                </li>
+                                <li class="span3">
+                                    <a href="javascript:return false;" class="thumbnail">
+                                        <img alt="GoPHP" src="img/gophp.png" />
+                                    </a>
+                                </li>
+                                <li class="span3">
+                                    <a href="javascript:return false;" class="thumbnail">
+                                        <img alt="GDG Goiás" src="img/gdggoias.jpg" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h4>Apoio:</h4>
+                        <div class="row-fluid">
+                            <ul class="thumbnails">
+                                </li>   
 		<li class="span3">
-                <a href="http://www.microsoft.com.br" target="_blank" class="thumbnail">
-                  <img alt="Microsoft" src="img/LogoMicrosoft.jpg"/>
-                </a>
-              </li>
-              <li class="span3">
-                <a href="http://www.comtecgo.com.br" class="thumbnail">
-                  <img alt="Contec" src="img/contec.jpg"/>
-                </a>
-              </li>
-			<li class="span3">
-                <a href="http://www.softprime.com.br" target="_blank" class="thumbnail">
-                  <img alt="Softprime" src="img/LogoSoftprime.jpg"/>
-                </a>
-              </li>            
-              <li class="span3">
-                <a href="http://www.enfinit.com.br" target="_blank" class="thumbnail">
-                  <img alt="Enfinit" src="img/enfinit.png"/>
-                </a>
-              <li class="span3">
-                <a href="http://www.whatsjob.com.br" target="_blank" class="thumbnail">
-                  <img alt="Whats Job" src="img/logo_whatsjob.png"/>
-                </a>
-			</li>   
+            <a href="http://www.microsoft.com.br" target="_blank" class="thumbnail">
+                <img alt="Microsoft" src="img/LogoMicrosoft.jpg" />
+            </a>
+        </li>
+                                <li class="span3">
+                                    <a href="http://www.comtecgo.com.br" class="thumbnail">
+                                        <img alt="Contec" src="img/contec.jpg" />
+                                    </a>
+                                </li>
+                                <li class="span3">
+                                    <a href="http://www.softprime.com.br" target="_blank" class="thumbnail">
+                                        <img alt="Softprime" src="img/LogoSoftprime.jpg" />
+                                    </a>
+                                </li>
+                                <li class="span3">
+                                    <a href="http://www.enfinit.com.br" target="_blank" class="thumbnail">
+                                        <img alt="Enfinit" src="img/enfinit.png" />
+                                    </a>
+                                    <li class="span3">
+                                        <a href="http://www.whatsjob.com.br" target="_blank" class="thumbnail">
+                                            <img alt="Whats Job" src="img/logo_whatsjob.png" />
+                                        </a>
+                                    </li>
 
-            </ul>
-          </div>
+                            </ul>
+                        </div>
 
-            
-          </div>
-          
-          
-        </div>    
-    
-             
-      </div> <!-- /container -->
-    
-    </div> <!-- /form  -->  
 
-    <!-- /CONTACT FORM  ############################################### -->
+                    </div>
 
-  </div> <!-- /container -->
 
-	<script type="text/javascript">
-	
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-30702122-1']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	
-	</script>
+                </div>
 
-	<!-- Le javascript
+
+            </div>
+            <!-- /container -->
+
+        </div>
+        <!-- /form  -->
+
+        <!-- /CONTACT FORM  ############################################### -->
+
+    </div>
+    <!-- /container -->
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30702122-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
 
-  <script src="js/jquery.js"></script>
   
-  <script src="js/jquery.mousewheel-3.0.4.pack.js"></script>
-  <script src="js/jquery.gmap.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-  <script src="js/jquery.form.js"></script>   
-  <script src="js/custom.js"></script>
-  <script src="js/jquery.isotope.min.js"></script> 
-  <script src="js/bootstrap-scrollspy.js"></script>
-  <script src="js/anchor.js" type="text/javascript"></script>
-  <script src="js/bootstrap.js"></script>
-
-
-
-     <!-- MAP -->
-
-   <script type="text/javascript">
-  $(document).ready(function(){
-    $("#map").gMap({ controls: false,
-                      scrollwheel: false,
-                          draggable: true,
-                      markers: [{ latitude: -16.715477,
-                                  longitude: -49.261295 }
-                                ],
-                      icon: { image: "img/pin-blue.png", 
-                              iconsize: [32, 32],
-                              iconanchor: [12, 32],
-                              infowindowanchor: [12, 0] },
-                      latitude: -16.715477,
-                      longitude: -49.261295,
-                      zoom: 16, });
-  });
-  </script>
-  </body>
-
-
-  
+</body>
 </html>
